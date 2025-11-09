@@ -32,7 +32,7 @@ function mostrarNombreUsuario() {
 
 function cerrarSesion() {
     localStorage.removeItem('username');
-    window.location.href = 'index.html';
+    window.location.href = 'Index.html';
 }
 
 function mostrarSeccion(idSeccion) {
@@ -142,7 +142,6 @@ function cafiM() {
         resultado.textContent = `¡Felicidades! Obtuviste ${puntaje}/5 respuestas correctas. ¡Aprobado!`;
         resultado.className = 'aprobado';
         
-        // Crear botón para descargar diploma
         const botonDiploma = document.createElement('button');
         botonDiploma.textContent = 'Descargar Diploma';
         botonDiploma.className = 'btn-enviar';
@@ -151,11 +150,8 @@ function cafiM() {
             generarDiploma('Matemáticas', puntaje, nombreUsuario);
         };
         
-        // Agregar botón al resultado
         resultado.appendChild(botonDiploma);
         
-        // Generar automáticamente el diploma (opcional)
-        // generarDiploma('Matemáticas', puntaje, nombreUsuario);
     } else {
         resultado.textContent = `Obtuviste ${puntaje}/5 respuestas correctas. Sigue estudiando.`;
         resultado.className = 'reprobado';
@@ -186,7 +182,6 @@ function cafiC() {
         ResultadoComu.textContent = `¡Felicidades! Obtuviste ${puntaje}/5 respuestas correctas. ¡Aprobado!`;
         ResultadoComu.className = 'aprobado';
         
-        // Crear botón para descargar diploma
         const botonDiploma = document.createElement('button');
         botonDiploma.textContent = 'Descargar Diploma';
         botonDiploma.className = 'btn-enviar';
@@ -195,7 +190,6 @@ function cafiC() {
             generarDiploma('Comunicación', puntaje, nombreUsuario);
         };
         
-        // Agregar botón al resultado
         ResultadoComu.appendChild(botonDiploma);
     } else {
         ResultadoComu.textContent = `Obtuviste ${puntaje}/5 respuestas correctas. Sigue estudiando.`;
@@ -227,7 +221,6 @@ function cafiT() {
         ResultadoTec.textContent = `¡Felicidades! Obtuviste ${puntaje}/5 respuestas correctas. ¡Aprobado!`;
         ResultadoTec.className = 'aprobado';
         
-        // Crear botón para descargar diploma
         const botonDiploma = document.createElement('button');
         botonDiploma.textContent = 'Descargar Diploma';
         botonDiploma.className = 'btn-enviar';
@@ -236,7 +229,6 @@ function cafiT() {
             generarDiploma('Tecnología', puntaje, nombreUsuario);
         };
         
-        // Agregar botón al resultado
         ResultadoTec.appendChild(botonDiploma);
     } else {
         ResultadoTec.textContent = `Obtuviste ${puntaje}/5 respuestas correctas. Sigue estudiando.`;
@@ -309,9 +301,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const pruebaTecnologia = document.getElementById('prueba-Tecnologia');
-    if (pruebaTecnologia) {  // ← CORREGIDO: pruebaTecnologia en lugar de pruebaCTecnologia
+    if (pruebaTecnologia) {  
         pruebaTecnologia.style.display = 'block';
     }
 });
             
+
 });
